@@ -1,0 +1,17 @@
+spring:
+  # 数据库配置
+  datasource:
+    url: jdbc:mysql://192.168.56.101:3306/springbootdemo_system?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+# mybatis配置
+mybatis:
+  # 配置映射类所在包名
+  type-aliases-package: com.example.springbootdemo.domain
+  # 配置mapper xml文件所在路径，这里是一个数组
+  mapper-locations:
+  - mappers/ProductMapper.xml
+
+logging:
+  level:
+    com.example.springbootdemo: DEBUG
