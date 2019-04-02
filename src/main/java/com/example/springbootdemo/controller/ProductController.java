@@ -22,13 +22,14 @@ public class ProductController {
         if (product != null) {
             product.setName(newProduct.getName());
             product.setPrice(newProduct.getPrice());
-            productService.update(product);
+            return productService.update(product);
+        } else {
+            return null;
         }
-        return product;
     }
 
     @PostMapping()
-    public int AddProductInfo(@RequestBody Product newProduct) {
+    public Product AddProductInfo(@RequestBody Product newProduct) {
         return productService.insert(newProduct);
     }
 

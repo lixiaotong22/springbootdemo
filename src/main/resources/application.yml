@@ -4,6 +4,10 @@ spring:
     url: jdbc:mysql://192.168.56.101:3306/springbootdemo_system?useUnicode=true&characterEncoding=utf8
     username: root
     password: 123456
+    # redis配置
+  redis:
+    host: 192.168.56.101
+    port: 6379
 # mybatis配置
 mybatis:
   # 配置映射类所在包名
